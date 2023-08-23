@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/backg"
+    >
+
+
+    <TextView
+        android:id="@+id/addcontact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Add Contact"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/nametext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginTop="18dp"
+        android:textSize="18dp"
+        android:text="Name:"
+        android:padding="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addcontact" />
+
+    <EditText
+        android:id="@+id/editnameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Name Here"
+        android:textColorHint="@color/white"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        android:textColor="#B8DAD9"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/nametext"
+        app:layout_constraintStart_toEndOf="@+id/nametext"
+        app:layout_constraintTop_toTopOf="@+id/nametext" />
+
+    <TextView
+        android:id="@+id/phonetext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:text="Phone:"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nametext" />
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Phone Number"
+        android:padding="12dp"
+        android:textSize="18dp"
+        android:textColor="#B8DAD9"
+        android:textColorHint="@color/white"
+        android:inputType="phone"
+        app:layout_constraintBottom_toBottomOf="@+id/phonetext"
+        app:layout_constraintStart_toEndOf="@+id/phonetext"
+        app:layout_constraintTop_toBottomOf="@+id/nametext" />
+
+    <EditText
+        android:id="@+id/descriptionedit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:hint="Description"
+        android:textSize="18dp"
+        android:textColor="#B8DAD9"
+        android:textColorHint="@color/white"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+
+    <Button
+        android:id="@+id/savebutton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="45dp"
+        android:padding="12dp"
+        android:text="Save"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionedit"
+        android:background="@android:color/transparent"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclercontant"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/savebutton"
+        tools:listitem="@layout/activity_recycler"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
