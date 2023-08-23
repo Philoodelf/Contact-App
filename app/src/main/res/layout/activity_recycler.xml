@@ -10,7 +10,6 @@
         android:id="@+id/imagerecycler"
         android:layout_width="80dp"
         android:layout_height="0dp"
-
         android:layout_marginTop="18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
